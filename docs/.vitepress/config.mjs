@@ -4,6 +4,7 @@ import transformPageData from '../scripts/transformPageData.js'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: "/eno-adr/",
   title: "eno-adr",
   description: "A sample site for adr",
   themeConfig: {
