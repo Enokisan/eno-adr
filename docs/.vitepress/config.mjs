@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
-import getAdrList from '../scripts/getAdrList'
+import getAdrList from '../scripts/getAdrList.js'
+import transformPageData from '../scripts/transformPageData.js'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -32,5 +33,8 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Enokisan/eno-adr' }
     ]
-  }
+  },
+
+  // https://vitepress.dev/reference/site-config#transformpagedata
+  transformPageData
 })

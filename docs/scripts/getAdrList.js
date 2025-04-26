@@ -1,5 +1,5 @@
 import path from 'path'
-import fs, { link } from 'fs'
+import fs from 'fs'
 
 export default function getAdrList() {
     const adrDir = path.join(__dirname, '../pages/adr')
