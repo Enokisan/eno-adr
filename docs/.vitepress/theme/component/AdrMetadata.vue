@@ -22,7 +22,7 @@ import { useData } from 'vitepress';
 import { computed } from 'vue';
 
 const { frontmatter } = useData()
-const adrCreatedDate = computed(() =>  {
+const adrCreatedDate = computed(() => {
     if (!frontmatter.value.date) return ''
     return new Date(frontmatter.value.date).toLocaleDateString('ja-JP', {
         year: 'numeric',
@@ -59,5 +59,4 @@ const adrCreatedDate = computed(() =>  {
     border-radius: 4px;
     font-size: 0.9em;
 }
-
 </style>
