@@ -20,7 +20,7 @@ export default function getAdrList() {
 
             return {
                 text: adrId ? adrId + "_" + title: title,
-                link: `/pages/adr/${file.replace('md', '')}`,
+                link: `/pages/adr/${file.replace('.md', '')}`,
                 adrId: adrId,
                 title: title,
                 status: statusMatch ? statusMatch[1] : null,
