@@ -1,5 +1,6 @@
 import path from 'path'
 import fs from 'fs'
+import { base } from '../.vitepress/config/base'
 
 export default function getAdrList() {
     const adrDir = path.join(__dirname, '../pages/adr')
@@ -20,7 +21,7 @@ export default function getAdrList() {
 
             return {
                 text: adrId ? adrId + "_" + title: title,
-                link: `/pages/adr/${file.replace('.md', '')}`,
+                link: `${base}pages/adr/${file.replace('.md', '')}`,
                 adrId: adrId,
                 title: title,
                 status: statusMatch ? statusMatch[1] : null,

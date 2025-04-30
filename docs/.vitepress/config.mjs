@@ -1,12 +1,13 @@
 import { defineConfig } from 'vitepress'
 import getAdrList from '../scripts/getAdrList.js'
 import transformPageData from '../scripts/transformPageData.js'
+import { base } from './config/base.js'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/eno-adr/",
-  title: "eno-adr",
-  description: "A sample site for adr",
+  base,
+  title: 'eno-adr',
+  description: 'A sample site for adr',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
