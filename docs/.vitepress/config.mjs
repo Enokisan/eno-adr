@@ -27,7 +27,7 @@ export default defineConfig({
       {
         text: 'ADR一覧',
         items: [
-          ...getAdrList()
+          ...getAdrList(false)
         ]
       }
     ],

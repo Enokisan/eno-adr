@@ -2,7 +2,7 @@ import path from 'path'
 import fs from 'fs'
 import { base } from '../.vitepress/config/base'
 
-export default function getAdrList() {
+export default function getAdrList(withBase = true) {
     const adrDir = path.join(__dirname, '../pages/adr')
     const files = fs.readdirSync(adrDir)
 
@@ -21,7 +21,7 @@ export default function getAdrList() {
 
             return {
                 text: adrId ? adrId + "_" + title: title,
-                link: `${base}pages/adr/${file.replace('.md', '')}`,
+                link: withBase ? `${base}pages/adr/${file.replace('.md', '')}`: `/pages/adr/${file.replace('.md', '')}`,
                 adrId: adrId,
                 title: title,
                 status: statusMatch ? statusMatch[1] : null,
